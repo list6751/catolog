@@ -15,11 +15,11 @@
       height: 100%;
       font-family: 'Arial', sans-serif;
       overflow: hidden;
-      background-color: #000; /* Черный фон сайта */
+      background-color: #000; 
       color: #fff;
     }
 
-    /* Черный экран при загрузке */
+    
     .intro-screen {
       position: absolute;
       top: 0;
@@ -48,7 +48,7 @@
 
     .content {
       opacity: 0;
-      animation: fadeInContent 2s ease-in-out 2.5s forwards; /* Задержка после исчезновения "Welcome" */
+      animation: fadeInContent 2s ease-in-out 2.5s forwards; 
       height: 100%;
       display: flex;
       justify-content: center;
@@ -143,12 +143,12 @@
   </style>
 </head>
 <body>
-  <!-- Черный экран с текстом при загрузке -->
+  
   <div class="intro-screen">
     Welcome
   </div>
 
-  <!-- Основной контент -->
+  
   <div class="content">
     <div class="game-catalog">
       <table id="games-table">
@@ -156,10 +156,11 @@
           <tr>
             <th>Игра</th>
             <th>Цена</th>
+            <th>⠀</th> 
           </tr>
         </thead>
         <tbody>
-          <!-- Данные о играх будут загружены сюда -->
+          
         </tbody>
       </table>
     </div>
@@ -167,7 +168,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Загружаем данные о играх из JSON-файла
+     
       fetch('games.json')
         .then(response => response.json())
         .then(data => {
@@ -177,7 +178,7 @@
             row.innerHTML = `
               <td>${game.name}</td>
               <td>${game.price}</td>
-              <td><img src="${game.icon}" alt="${game.name}"></td>
+              <td><img src="${game.icon}" alt="${game.name}"></td> <!-- Оставляем картинки в столбце "Лого" -->
             `;
             tableBody.appendChild(row);
           });
