@@ -3,22 +3,22 @@
     {
       "name": "Cyberpunk 2077",
       "price": "4999 ₽",
-      "icon": "https://upload.wikimedia.org/wikipedia/ru/b/bb/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%BE%D0%B9_%D0%B8%D0%B3%D1%80%D1%8B_Cyberpunk_2077.jpg"
+      "icon": "images/cyberpunk.png"
     },
     {
       "name": "The Witcher 3",
       "price": "1299 ₽",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/3/36/The_Witcher_3_Wild_Hunt_logo.svg"
+      "icon": "images/witcher3.png"
     },
     {
       "name": "Red Dead Redemption 2",
       "price": "2499 ₽",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Red_Dead_Redemption_2_logo.png"
+      "icon": "images/rdr2.png"
     },
     {
       "name": "Assassin's Creed Valhalla",
       "price": "3499 ₽",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Assassin%27s_Creed_Valhalla_logo.svg"
+      "icon": "images/acvalhalla.png"
     }
   ]
 }
