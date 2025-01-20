@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Технические работы</title>
+  <title>название магазина</title>
   <style>
     * {
       margin: 0;
@@ -14,16 +14,12 @@
     body, html {
       height: 100%;
       font-family: 'Arial', sans-serif;
-      background-color: #000; /* Черный фон */
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       overflow: hidden;
-      position: relative;
+      background-color: #000; 
+      color: #fff;
     }
 
-    /* Анимация появления текста "Welcome" в двоичном коде */
+    
     .intro-screen {
       position: absolute;
       top: 0;
@@ -34,8 +30,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #00FF00;
-      font-size: 1.5rem;
+      color: #fff;
+      font-size: 3rem;
       opacity: 1;
       animation: fadeInScreen 2.5s ease-in-out forwards;
     }
@@ -45,9 +41,14 @@
       100% { opacity: 0; visibility: hidden; }
     }
 
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
     .content {
       opacity: 0;
-      animation: fadeInContent 2s ease-in-out 2.5s forwards; /* Задержка после исчезновения "Welcome" */
+      animation: fadeInContent 2s ease-in-out 2.5s forwards; 
       height: 100%;
       display: flex;
       justify-content: center;
@@ -59,75 +60,133 @@
       100% { opacity: 1; }
     }
 
-    .message {
-      font-size: 2rem;
+    h1 {
+      font-size: 3rem;
       text-align: center;
-      z-index: 10;
-      position: relative;
+      color: transparent;
+      background: linear-gradient(to right, #ffffff, #000000);
+      -webkit-background-clip: text;
+      animation: fadeInText 2s ease-in-out;
     }
 
-    .binary-flow {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .game-catalog {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    table {
       width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      animation: binaryAnimation 1.5s linear infinite;
+      border-collapse: collapse;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeInTable 2s ease-in-out forwards;
     }
 
-    @keyframes binaryAnimation {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(100%); }
+    th, td {
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: transform 0.3s ease-in-out;
     }
 
-    .binary {
-      font-size: 2rem;
-      position: absolute;
-      color: #00FF00; /* Зеленый цвет для 0 и 1 */
-      white-space: nowrap;
-      animation: binaryMovement 0.2s linear infinite;
+    th {
+      background-color: #000;
+      color: white;
     }
 
-    @keyframes binaryMovement {
-      0% { top: -30px; }
-      100% { top: 100vh; }
+    td {
+      background-color: #222;
+      color: #fff;
     }
 
+    tr:hover {
+      background-color: #444;
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    @keyframes fadeInTable {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .game-catalog {
+        padding: 15px;
+      }
+
+      table {
+        font-size: 1rem;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <!-- Черный экран с двоичным кодом "Welcome" -->
+  
   <div class="intro-screen">
-    01010111 01100101 01101100 01100011 01101111 01101101 01100101
+    Welcome
   </div>
 
-  <!-- Основной контент -->
+  
   <div class="content">
-    <!-- Сообщение на экране -->
-    <div class="message">
-      У нас технические работы, сайт скоро возобновит рабочий режим.
-    </div>
-
-    <!-- Бинарный поток 0 и 1 -->
-    <div class="binary-flow">
-      <div class="binary" style="left: 10%;">0</div>
-      <div class="binary" style="left: 20%;">1</div>
-      <div class="binary" style="left: 30%;">0</div>
-      <div class="binary" style="left: 40%;">1</div>
-      <div class="binary" style="left: 50%;">0</div>
-      <div class="binary" style="left: 60%;">1</div>
-      <div class="binary" style="left: 70%;">0</div>
-      <div class="binary" style="left: 80%;">1</div>
-      <div class="binary" style="left: 90%;">0</div>
+    <div class="game-catalog">
+      <table id="games-table">
+        <thead>
+          <tr>
+            <th>Игра</th>
+            <th>Цена</th>
+            <th>⠀</th> 
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
     </div>
   </div>
 
   <script>
-    // Можно добавить JS, если необходимо для других функциональностей
+    document.addEventListener("DOMContentLoaded", function() {
+     
+      fetch('games.json')
+        .then(response => response.json())
+        .then(data => {
+          const tableBody = document.querySelector('#games-table tbody');
+          data.games.forEach(game => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${game.name}</td>
+              <td>${game.price}</td>
+              <td><img src="${game.icon}" alt="${game.name}"></td> <!-- Оставляем картинки в столбце "Лого" -->
+            `;
+            tableBody.appendChild(row);
+          });
+        })
+        .catch(error => {
+          console.error('Ошибка при загрузке данных о играх:', error);
+        });
+    });
   </script>
-
 </body>
 </html>
