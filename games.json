@@ -2,22 +2,22 @@
   "games": [
     {
       "name": "Cyberpunk 2077",
-      "price": "25 800₸",
+      "price": "25  800₸",
       "icon": "images/cyberpunk.png"
     },
     {
       "name": "The Witcher 3",
-      "price": "6 700₸",
+      "price": "6  700₸",
       "icon": "images/witcher3.png"
     },
     {
       "name": "Red Dead Redemption 2",
-      "price": "12 900₸",
+      "price": "12  900₸",
       "icon": "images/rdr2.png"
     },
     {
       "name": "Assassin's Creed Valhalla",
-      "price": "1 800₸",
+      "price": "1  800₸",
       "icon": "images/acvalhalla.png"
     }
   ]
