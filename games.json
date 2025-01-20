@@ -1,0 +1,25 @@
+{
+    "games": [
+      {
+        "name": "Cyberpunk 2077",
+        "price": "4999 ₽",
+        "icon": "https://via.placeholder.com/50?text=CP"
+      },
+      {
+        "name": "The Witcher 3",
+        "price": "1299 ₽",
+        "icon": "https://via.placeholder.com/50?text=TW3"
+      },
+      {
+        "name": "Red Dead Redemption 2",
+        "price": "2499 ₽",
+        "icon": "https://via.placeholder.com/50?text=RDR2"
+      },
+      {
+        "name": "Assassin's Creed Valhalla",
+        "price": "3499 ₽",
+        "icon": "https://via.placeholder.com/50?text=ACV"
+      }
+    ]
+  }
+  

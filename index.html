@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игры</title>
+  <style>
+    /* Общие стили */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: transparent;
+      background: linear-gradient(to right, #ffffff, #00d4ff);
+      -webkit-background-clip: text;
+      animation: fadeInText 2s ease-in-out;
+    }
+
+    .game-catalog {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeInTable 2s ease-in-out;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeInTable 2s ease-in-out forwards;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    th {
+      background-color: #0099cc;
+      color: white;
+    }
+
+    td {
+      background-color: #1c3b57;
+      color: #fff;
+    }
+
+    tr:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+      transform: rotate(360deg);
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInTable {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Игры</h1>
+
+  <div class="game-catalog">
+    <table id="games-table">
+      <thead>
+        <tr>
+          <th>Игра</th>
+          <th>Цена</th>
+          <th>Иконка</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Данные о играх будут загружены сюда -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Загружаем данные о играх из JSON-файла
+      fetch('games.json')
+        .then(response => response.json())
+        .then(data => {
+          const tableBody = document.querySelector('#games-table tbody');
+          data.games.forEach(game => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${game.name}</td>
+              <td>${game.price}</td>
+              <td><img src="${game.icon}" alt="${game.name}"></td>
+            `;
+            tableBody.appendChild(row);
+          });
+        })
+        .catch(error => {
+          console.error('Ошибка при загрузке данных о играх:', error);
+        });
+    });
+  </script>
+</body>
+</html>
