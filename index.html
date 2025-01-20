@@ -15,6 +15,8 @@
       height: 100%;
       font-family: 'Arial', sans-serif;
       overflow: hidden;
+      background-color: #000; /* Черный фон сайта */
+      color: #fff;
     }
 
     /* Черный экран при загрузке */
@@ -31,7 +33,7 @@
       color: #fff;
       font-size: 3rem;
       opacity: 1;
-      animation: fadeInScreen 1s ease-in-out forwards;
+      animation: fadeInScreen 2.5s ease-in-out forwards;
     }
 
     @keyframes fadeInScreen {
@@ -46,7 +48,7 @@
 
     .content {
       opacity: 0;
-      animation: fadeInContent 2s ease-in-out 1s forwards;
+      animation: fadeInContent 2s ease-in-out 2.5s forwards; /* Задержка после исчезновения "Welcome" */
       height: 100%;
       display: flex;
       justify-content: center;
