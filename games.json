@@ -1,25 +1,24 @@
 {
-    "games": [
-      {
-        "name": "Cyberpunk 2077",
-        "price": "4999 ₽",
-        "icon": "https://via.placeholder.com/50?text=CP"
-      },
-      {
-        "name": "The Witcher 3",
-        "price": "1299 ₽",
-        "icon": "https://via.placeholder.com/50?text=TW3"
-      },
-      {
-        "name": "Red Dead Redemption 2",
-        "price": "2499 ₽",
-        "icon": "https://via.placeholder.com/50?text=RDR2"
-      },
-      {
-        "name": "Assassin's Creed Valhalla",
-        "price": "3499 ₽",
-        "icon": "https://via.placeholder.com/50?text=ACV"
-      }
-    ]
-  }
-  
+  "games": [
+    {
+      "name": "Cyberpunk 2077",
+      "price": "4999 ₽",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Cyberpunk_2077_logo.svg/1280px-Cyberpunk_2077_logo.svg.png"
+    },
+    {
+      "name": "The Witcher 3",
+      "price": "1299 ₽",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/3/36/The_Witcher_3_Wild_Hunt_logo.svg"
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "price": "2499 ₽",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Red_Dead_Redemption_2_logo.png"
+    },
+    {
+      "name": "Assassin's Creed Valhalla",
+      "price": "3499 ₽",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Assassin%27s_Creed_Valhalla_logo.svg"
+    }
+  ]
+}
