@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Игры</title>
+  <title>Каталог</title>
   <style>
     /* Общие стили */
     * {
@@ -14,8 +14,8 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-      color: #fff;
+      background: #333; /* Черный фон */
+      color: #fff; /* Белый текст */
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -27,7 +27,7 @@
       text-align: center;
       font-size: 3rem;
       color: transparent;
-      background: linear-gradient(to right, #ffffff, #00d4ff);
+      background: linear-gradient(to right, #ffffff, #000000); /* Бело-черный градиент */
       -webkit-background-clip: text;
       animation: fadeInText 2s ease-in-out;
     }
@@ -36,7 +36,7 @@
       width: 90%;
       max-width: 1000px;
       margin: 20px auto;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1); /* Прозрачный фон */
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -60,17 +60,17 @@
     }
 
     th {
-      background-color: #0099cc;
+      background-color: #000; /* Черный фон для заголовков */
       color: white;
     }
 
     td {
-      background-color: #1c3b57;
+      background-color: #222; /* Темно-серый фон для ячеек */
       color: #fff;
     }
 
     tr:hover {
-      background-color: #333;
+      background-color: #444; /* Светло-серый фон при наведении */
       transform: scale(1.05);
     }
 
@@ -79,11 +79,7 @@
       height: 50px;
       object-fit: cover;
       border-radius: 50%;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    img:hover {
-      transform: rotate(360deg);
+      /* Убрана анимация вращения */
     }
 
     @keyframes fadeInText {
@@ -98,7 +94,7 @@
   </style>
 </head>
 <body>
-  <h1>Игры</h1>
+  <h1>Каталог</h1>
 
   <div class="game-catalog">
     <table id="games-table">
