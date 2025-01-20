@@ -12,12 +12,12 @@
     },
     {
       "name": "Red Dead Redemption 2",
-      "price": "12900₸",
+      "price": "12 900₸",
       "icon": "images/rdr2.png"
     },
     {
       "name": "Assassin's Creed Valhalla",
-      "price": "1800₸",
+      "price": "1 800₸",
       "icon": "images/acvalhalla.png"
     }
   ]
