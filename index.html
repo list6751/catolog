@@ -59,7 +59,7 @@
       font-size: 3rem;
       text-align: center;
       color: transparent;
-      background: linear-gradient(to right, #ffffff 30%, #000000 70%); /* Градиент от центра */
+      background: linear-gradient(to right, #ffffff 30%, #000000 70%);
       -webkit-background-clip: text;
       animation: fadeInText 2s ease-in-out;
       margin-bottom: 20px;
@@ -79,7 +79,6 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
-    /* Контейнер для таблицы с прокруткой */
     .table-container {
       width: 100%;
       overflow-x: auto;
@@ -180,14 +179,15 @@
   <div class="content">
     <div class="game-catalog">
       <h1>Установка игр для PS4/PS5</h1>
-      <!-- Контейнер для таблицы с горизонтальной прокруткой -->
       <div class="table-container">
         <table id="games-table">
           <thead>
             <tr>
               <th>Игра</th>
-              <th>Цена онлайн версии(PS5)</th>
-              <th>Цена универсальной версии(PS5)</th>
+              <th>Цена онлайн версии (PS5)</th>
+              <th>Цена универсальной версии (PS5)</th>
+              <th>Цена онлайн версии (PS4)</th>
+              <th>Цена универсальной версии (PS4)</th>
               <th>⠀</th>
             </tr>
           </thead>
@@ -208,8 +208,10 @@
             const row = document.createElement('tr');
             row.innerHTML = `
               <td>${game.name}</td>
-              <td>${game.onlinePrice}</td>
-              <td>${game.universalPrice}</td>
+              <td>${game.onlinePricePS5}</td>
+              <td>${game.universalPricePS5}</td>
+              <td>${game.onlinePricePS4}</td>
+              <td>${game.universalPricePS4}</td>
               <td><img src="${game.icon}" alt="${game.name}"></td>
             `;
             tableBody.appendChild(row);
