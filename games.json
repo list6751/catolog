@@ -79,9 +79,9 @@
         },
         {
             "name": "MORTAL 1 KOMBAT",
-            "ps5_online_price": "",
+            "ps5_online_price": "⠀",
             "ps5_universal_price": "17000₸",
-            "ps4_online_price": "",
+            "ps4_online_price": "⠀",
             "ps4_universal_price": "16000₸"
         },
         {
@@ -424,8 +424,8 @@
             "name": "GHOSTRUNNER 2",
             "ps5_online_price": "7990₸",
             "ps5_universal_price": "9990₸",
-            "ps4_online_price": "",
-            "ps4_universal_price": ""
+            "ps4_online_price": "⠀",
+            "ps4_universal_price": "⠀"
         }
     ]
 }
