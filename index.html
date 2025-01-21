@@ -14,12 +14,11 @@
     body, html {
       height: 100%;
       font-family: 'Arial', sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
       background-color: #000; 
       color: #fff;
     }
 
-    
     .intro-screen {
       position: absolute;
       top: 0;
@@ -41,11 +40,6 @@
       100% { opacity: 0; visibility: hidden; }
     }
 
-    @keyframes fadeInText {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
     .content {
       opacity: 0;
       animation: fadeInContent 2s ease-in-out 2.5s forwards; 
@@ -53,6 +47,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 10px;
     }
 
     @keyframes fadeInContent {
@@ -67,15 +62,20 @@
       background: linear-gradient(to right, #ffffff, #000000);
       -webkit-background-clip: text;
       animation: fadeInText 2s ease-in-out;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     .game-catalog {
-      width: 90%;
-      max-width: 1000px;
-      margin: 20px auto;
+      width: 100%;
+      max-width: 900px;
       background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 15px;
+      padding: 15px;
+      border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
@@ -83,8 +83,6 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
-      opacity: 0;
-      animation: fadeInTable 2s ease-in-out forwards;
     }
 
     th, td {
@@ -92,7 +90,6 @@
       text-align: center;
       font-size: 1.2rem;
       font-weight: 500;
-      transition: transform 0.3s ease-in-out;
     }
 
     th {
@@ -105,9 +102,12 @@
       color: #fff;
     }
 
+    tr {
+      transition: background-color 0.3s ease;
+    }
+
     tr:hover {
       background-color: #444;
-      transform: scale(1.05);
     }
 
     img {
@@ -117,18 +117,14 @@
       border-radius: 50%;
     }
 
-    @keyframes fadeInTable {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
     @media (max-width: 768px) {
       h1 {
         font-size: 2rem;
+        margin-bottom: 10px;
       }
 
       .game-catalog {
-        padding: 15px;
+        padding: 10px;
       }
 
       table {
@@ -139,6 +135,33 @@
         width: 40px;
         height: 40px;
       }
+
+      th, td {
+        padding: 10px;
+      }
+
+      .intro-screen {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .game-catalog {
+        padding: 8px;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
     }
   </style>
 </head>
@@ -148,19 +171,19 @@
     Welcome
   </div>
 
-  
   <div class="content">
     <div class="game-catalog">
+      <h1>Магазин игр</h1>
       <table id="games-table">
         <thead>
           <tr>
             <th>Игра</th>
-            <th>Цена</th>
-            <th>⠀</th> 
+            <th>Цена онлайн версии</th>
+            <th>Цена универсальной версии</th>
+            <th>⠀</th>
           </tr>
         </thead>
         <tbody>
-          
         </tbody>
       </table>
     </div>
@@ -168,7 +191,6 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-     
       fetch('games.json')
         .then(response => response.json())
         .then(data => {
@@ -177,8 +199,9 @@
             const row = document.createElement('tr');
             row.innerHTML = `
               <td>${game.name}</td>
-              <td>${game.price}</td>
-              <td><img src="${game.icon}" alt="${game.name}"></td> <!-- Оставляем картинки в столбце "Лого" -->
+              <td>${game.onlinePrice}</td>
+              <td>${game.universalPrice}</td>
+              <td><img src="${game.icon}" alt="${game.name}"></td>
             `;
             tableBody.appendChild(row);
           });
