@@ -52,6 +52,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
     @keyframes fadeInContent {
@@ -128,10 +129,29 @@
         font-size: 1rem;
       }
     }
+
+    /* Новый стиль для логотипа */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #logo {
+      width: 150px; /* Ширина логотипа */
+      height: auto;
+    }
+
   </style>
 </head>
 <body>
   
+  <!-- Логотип в шапке сайта -->
+  <header>
+    <img id="logo" src="assets/logo.png" alt="Логотип">
+  </header>
+
   <div class="intro-screen">
     Welcome
   </div>
