@@ -51,6 +51,16 @@
       animation: fadeInScreen 2.5s ease-in-out forwards;
     }
 
+    .black-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: none;
+    }
+
     @keyframes fadeInScreen {
       0% { opacity: 1; }
       100% { opacity: 0; visibility: hidden; }
@@ -168,11 +178,13 @@
     <button class="change-name-button" id="change-name-button" style="display: none;">Изменить имя акаунта</button>
   </div>
 
-  <div class="intro-screen" id="intro-screen">
+  <div class="black-screen" id="black-screen"></div>
+
+  <div class="intro-screen" id="intro-screen" style="display: none;">
     Welcome
   </div>
 
-  <div class="content">
+  <div class="content" style="display: none;">
     <div class="game-catalog">
       <table id="games-table">
         <thead>
@@ -220,7 +232,17 @@
 
       setTimeout(() => {
         greetingScreen.style.display = 'none';
-        document.getElementById('intro-screen').style.display = 'block';
+        document.getElementById('black-screen').style.display = 'block';
+        
+        setTimeout(() => {
+          document.getElementById('black-screen').style.display = 'none';
+          document.getElementById('intro-screen').style.display = 'block';
+          
+          setTimeout(() => {
+            document.getElementById('intro-screen').style.display = 'none';
+            document.querySelector('.content').style.display = 'flex';
+          }, 2000);
+        }, 2000);
       }, 5000);
 
       fetch('games.json')
