@@ -19,7 +19,6 @@
       color: #fff;
     }
 
-    
     .intro-screen {
       position: absolute;
       top: 0;
@@ -92,7 +91,6 @@
       text-align: center;
       font-size: 1.2rem;
       font-weight: 500;
-      transition: transform 0.3s ease-in-out;
     }
 
     th {
@@ -107,7 +105,6 @@
 
     tr:hover {
       background-color: #444;
-      transform: scale(1.05);
     }
 
     img {
@@ -148,15 +145,17 @@
     Welcome
   </div>
 
-  
   <div class="content">
     <div class="game-catalog">
       <table id="games-table">
         <thead>
           <tr>
             <th>Игра</th>
-            <th>Цена</th>
-            <th>⠀</th> 
+            <th>Цена PS5 Онлайн</th>
+            <th>Цена PS5 Универсал</th>
+            <th>Цена PS4 Онлайн</th>
+            <th>Цена PS4 Универсал</th>
+            <th>⠀</th>
           </tr>
         </thead>
         <tbody>
@@ -168,7 +167,6 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-     
       fetch('games.json')
         .then(response => response.json())
         .then(data => {
@@ -177,8 +175,11 @@
             const row = document.createElement('tr');
             row.innerHTML = `
               <td>${game.name}</td>
-              <td>${game.price}</td>
-              <td><img src="${game.icon}" alt="${game.name}"></td> <!-- Оставляем картинки в столбце "Лого" -->
+              <td>${game.ps5_online_price}</td>
+              <td>${game.ps5_universal_price}</td>
+              <td>${game.ps4_online_price}</td>
+              <td>${game.ps4_universal_price}</td>
+              <td><img src="${game.icon}" alt="${game.name}"></td>
             `;
             tableBody.appendChild(row);
           });
