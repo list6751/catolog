@@ -1,24 +1,494 @@
 {
   "games": [
     {
-      "name": "Cyberpunk 2077",
-      "price": "25  800₸",
-      "icon": "images/cyberpunk.png"
+      "name": "UFS5",
+      "ps5_online_price": "9000₸",
+      "ps5_universal_price": "17000₸",
+      "ps4_online_price": "",
+      "ps4_universal_price": "",
+      "icon": "ufs5.jpg"
     },
     {
-      "name": "The Witcher 3",
-      "price": "6  700₸",
-      "icon": "images/witcher3.png"
+      "name": "FC24",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "10000₸",
+      "ps4_online_price": "6000₸",
+      "ps4_universal_price": "10000₸",
+      "icon": "fc24.jpg"
     },
     {
-      "name": "Red Dead Redemption 2",
-      "price": "12  900₸",
-      "icon": "images/rdr2.png"
+      "name": "FC25",
+      "ps5_online_price": "14000₸",
+      "ps5_universal_price": "18000₸",
+      "ps4_online_price": "10000₸",
+      "ps4_universal_price": "14000₸",
+      "icon": "fc25.jpg"
     },
     {
-      "name": "Assassin's Creed Valhalla",
-      "price": "1  800₸",
-      "icon": "images/acvalhalla.png"
+      "name": "MORTAL11KOMBAT",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7000₸",
+      "icon": "mortal11kombat.jpg"
+    },
+    {
+      "name": "UFC4",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "9000₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "8500₸",
+      "icon": "ufc4.jpg"
+    },
+    {
+      "name": "GTA5",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "8000₸",
+      "icon": "gta5.jpg"
+    },
+    {
+      "name": "ОДИН ИЗ НАС",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "9000₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "8500₸",
+      "icon": "odin_iz_nas.jpg"
+    },
+    {
+      "name": "ЧЕЛОВЕК ПАУК",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "9500₸",
+      "ps4_online_price": "4800₸",
+      "ps4_universal_price": "9000₸",
+      "icon": "chelovek_pauk.jpg"
+    },
+    {
+      "name": "ЧЕЛОВЕК ПАУК 2",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "10000₸",
+      "ps4_online_price": "6000₸",
+      "ps4_universal_price": "9500₸",
+      "icon": "chelovek_pauk_2.jpg"
+    },
+    {
+      "name": "INJUSTICE 2",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "9500₸",
+      "ps4_online_price": "5500₸",
+      "ps4_universal_price": "9000₸",
+      "icon": "injustice_2.jpg"
+    },
+    {
+      "name": "MINECRAFT",
+      "ps5_online_price": "5000₸",
+      "ps5_universal_price": "7000₸",
+      "ps4_online_price": "4000₸",
+      "ps4_universal_price": "7000₸",
+      "icon": "minecraft.jpg"
+    },
+    {
+      "name": "MORTAL 1 KOMBAT",
+      "ps5_online_price": "",
+      "ps5_universal_price": "17000₸",
+      "ps4_online_price": "",
+      "ps4_universal_price": "16000₸",
+      "icon": "mortal_1_kombat.jpg"
+    },
+    {
+      "name": "RDR 2",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "8000₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "rdr2.jpg"
+    },
+    {
+      "name": "GOD OF WAR(РАГНАРЕК)",
+      "ps5_online_price": "6000₸",
+      "ps5_universal_price": "9000₸",
+      "ps4_online_price": "5000₸",
+      "ps4_universal_price": "8500₸",
+      "icon": "god_of_war_ragnarok.jpg"
+    },
+    {
+      "name": "CALL of DUTY(MW)",
+      "ps5_online_price": "5000₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7000₸",
+      "icon": "call_of_duty_mw.jpg"
+    },
+    {
+      "name": "NFS",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "8000₸",
+      "ps4_online_price": "5000₸",
+      "ps4_universal_price": "7000₸",
+      "icon": "nfs.jpg"
+    },
+    {
+      "name": "NFS(PAYBACK)",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "5000₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "nfs_payback.jpg"
+    },
+    {
+      "name": "CARS 3",
+      "ps5_online_price": "5000₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7000₸",
+      "icon": "cars3.jpg"
+    },
+    {
+      "name": "TENNIS world tour 2",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "10000₸",
+      "ps4_online_price": "5500₸",
+      "ps4_universal_price": "9500₸",
+      "icon": "tennis_world_tour2.jpg"
+    },
+    {
+      "name": "ЖИЗНЬ ПОСЛЕ",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "zhizn_posle.jpg"
+    },
+    {
+      "name": "RESIDENT EVIL 2",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "8000₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "resident_evil_2.jpg"
+    },
+    {
+      "name": "FAR CRY 3",
+      "ps5_online_price": "5000₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7000₸",
+      "icon": "far_cry_3.jpg"
+    },
+    {
+      "name": "JEDI fallen order",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "10000₸",
+      "ps4_online_price": "6500₸",
+      "ps4_universal_price": "9500₸",
+      "icon": "jedi_fallen_order.jpg"
+    },
+    {
+      "name": "TEKKEN 7",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "9000₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "8000₸",
+      "icon": "tekken7.jpg"
+    },
+    {
+      "name": "SONIC",
+      "ps5_online_price": "5000₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "sonic.jpg"
+    },
+    {
+      "name": "ПРИЗРАК ЦУСИМЫ",
+      "ps5_online_price": "7000₸",
+      "ps5_universal_price": "11000₸",
+      "ps4_online_price": "6500₸",
+      "ps4_universal_price": "10000₸",
+      "icon": "prizrak_tsusimy.jpg"
+    },
+    {
+      "name": "DEMON SLAYER",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "6000₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "demon_slayer.jpg"
+    },
+    {
+      "name": "DETROIT",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "5500₸",
+      "ps4_universal_price": "8000₸",
+      "icon": "detroit.jpg"
+   },
+   {
+      "name": "HELLO NEIGHBOR 2",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "6500₸",
+      "ps4_universal_price": "8000₸",
+      "icon": "hello_neighbor_2.jpg"
+    },
+    {
+      "name": "FALLOUT 4",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "7000₸",
+      "ps4_online_price": "4500₸",
+      "ps4_universal_price": "6500₸",
+      "icon": "fallout_4.jpg"
+    },
+    {
+      "name": "SHINOBI STRIKER",
+      "ps5_online_price": "5500₸",
+      "ps5_universal_price": "7000₸",
+      "ps4_online_price": "5000₸",
+      "ps4_universal_price": "6000₸",
+      "icon": "shinobi_striker.jpg"
+    },
+    {
+      "name": "CYBERPUNK 2077",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "8000₸",
+      "ps4_online_price": "5500₸",
+      "ps4_universal_price": "7000₸",
+      "icon": "cyberpunk_2077.jpg"
+    },
+    {
+      "name": "GUARDIANS OF THE GALAXY",
+      "ps5_online_price": "6000₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "5000₸",
+      "ps4_universal_price": "6500₸",
+      "icon": "guardians_of_the_galaxy.jpg"
+    },
+    {
+      "name": "KENA BRIDGE OF SPIRITS",
+      "ps5_online_price": "7500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "7000₸",
+      "ps4_universal_price": "8000₸",
+      "icon": "kena_bridge_of_spirits.jpg"
+    },
+    {
+      "name": "DYING LIGHT 2",
+      "ps5_online_price": "12990₸",
+      "ps5_universal_price": "14990₸",
+      "ps4_online_price": "11990₸",
+      "ps4_universal_price": "13990₸",
+      "icon": "dying_light_2.jpg"
+    },
+    {
+      "name": "BATTLEFIELD 2042",
+      "ps5_online_price": "11500₸",
+      "ps5_universal_price": "14500₸",
+      "ps4_online_price": "10500₸",
+      "ps4_universal_price": "13500₸",
+      "icon": "battlefield_2042.jpg"
+    },
+    {
+      "name": "FNAF SECURITY BREACH",
+      "ps5_online_price": "11500₸",
+      "ps5_universal_price": "14500₸",
+      "ps4_online_price": "10500₸",
+      "ps4_universal_price": "13500₸",
+      "icon": "fnaf_security_breach.jpg"
+    },
+    {
+      "name": "MAFIA TRILOGY",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "6000₸",
+      "ps4_universal_price": "8000₸",
+      "icon": "mafia_trilogy.jpg"
+    },
+    {
+      "name": "BATTLE FOR BIKINI BOTTOM",
+      "ps5_online_price": "7000₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "6500₸",
+      "ps4_universal_price": "8000₸",
+      "icon": "battle_for_bikini_bottom.jpg"
+    },
+    {
+      "name": "WATCH DOGS 2",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "6500₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "watch_dogs_2.jpg"
+    },
+    {
+      "name": "HOGWARTS LEGACY",
+      "ps5_online_price": "7500₸",
+      "ps5_universal_price": "10000₸",
+      "ps4_online_price": "7000₸",
+      "ps4_universal_price": "9000₸",
+      "icon": "hogwarts_legacy.jpg"
+    },
+    {
+      "name": "GRAN TURISMO 7",
+      "ps5_online_price": "6500₸",
+      "ps5_universal_price": "8500₸",
+      "ps4_online_price": "6000₸",
+      "ps4_universal_price": "7500₸",
+      "icon": "gran_turismo_7.jpg"
+    },
+    {
+      "name": "HORIZON ZERODAWN",
+      "ps5_online_price": "8500₸",
+      "ps5_universal_price": "11000₸",
+      "ps4_online_price": "8000₸",
+      "ps4_universal_price": "10000₸",
+      "icon": "horizon_zerodawn.jpg"
+    },
+    {
+      "name": "ASSASSINS CREED MIRAGE",
+      "ps5_online_price": "8990₸",
+      "ps5_universal_price": "11990₸",
+      "ps4_online_price": "8990₸",
+      "ps4_universal_price": "8990₸",
+      "icon": "assassins_creed_mirage.jpg"
+    },
+    {
+      "name": "NBA 2K24",
+      "ps5_online_price": "11990₸",
+      "ps5_universal_price": "16990₸",
+      "ps4_online_price": "11990₸",
+      "ps4_universal_price": "11990₸",
+      "icon": "nba_2k24.jpg"
+    },
+    {
+      "name": "NHL24",
+      "ps5_online_price": "10990₸",
+      "ps5_universal_price": "14990₸",
+      "ps4_online_price": "10990₸",
+      "ps4_universal_price": "13990₸",
+      "icon": "nhl24.jpg"
+    },
+    {
+      "name": "SACKBOY",
+      "ps5_online_price": "4990₸",
+      "ps5_universal_price": "5990₸",
+      "ps4_online_price": "3990₸",
+      "ps4_universal_price": "4990₸",
+      "icon": "sackboy.jpg"
+    },
+    {
+      "name": "WRC 8",
+      "ps5_online_price": "2990₸",
+      "ps5_universal_price": "3990₸",
+      "ps4_online_price": "2990₸",
+      "ps4_universal_price": "3990₸",
+      "icon": "wrc8.jpg"
+    },
+    {
+      "name": "BORDERLANDS 3",
+      "ps5_online_price": "3990₸",
+      "ps5_universal_price": "4990₸",
+      "ps4_online_price": "3990₸",
+      "ps4_universal_price": "4990₸",
+      "icon": "borderlands_3.jpg"
+    },
+    {
+      "name": "AVATAR",
+      "ps5_online_price": "11990₸",
+      "ps5_universal_price": "13990₸",
+      "ps4_online_price": "11990₸",
+      "ps4_universal_price": "13990₸",
+      "icon": "avatar.jpg"
+    },
+    {
+      "name": "HITMAN",
+      "ps5_online_price": "4990₸",
+      "ps5_universal_price": "6500₸",
+      "ps4_online_price": "4990₸",
+      "ps4_universal_price": "5990₸",
+      "icon": "hitman.jpg"
+    },
+    {
+  "games": [
+    {
+      "name": "FAR CRY 6",
+      "ps5_online_price": "4990₸",
+      "ps5_universal_price": "6990₸",
+      "ps4_online_price": "4990₸",
+      "ps4_universal_price": "5990₸",
+      "icon": "far_cry_6.jpg"
+    },
+    {
+      "name": "THE WITCHER 3",
+      "ps5_online_price": "3990₸",
+      "ps5_universal_price": "4990₸",
+      "ps4_online_price": "3990₸",
+      "ps4_universal_price": "4990₸",
+      "icon": "witcher_3.jpg"
+    },
+    {
+      "name": "THE CALLISTO PROTOCOL",
+      "ps5_online_price": "8990₸",
+      "ps5_universal_price": "9990₸",
+      "ps4_online_price": "8990₸",
+      "ps4_universal_price": "9990₸",
+      "icon": "callisto_protocol.jpg"
+    },
+    {
+      "name": "MOUNT BLADE 2",
+      "ps5_online_price": "5990₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "5990₸",
+      "ps4_universal_price": "6990₸",
+      "icon": "mount_blade_2.jpg"
+    },
+    {
+      "name": "DARK SOULS 3",
+      "ps5_online_price": "4990₸",
+      "ps5_universal_price": "7500₸",
+      "ps4_online_price": "4990₸",
+      "ps4_universal_price": "6990₸",
+      "icon": "dark_souls_3.jpg"
+    },
+    {
+      "name": "METRO REDUX",
+      "ps5_online_price": "4500₸",
+      "ps5_universal_price": "5500₸",
+      "ps4_online_price": "3990₸",
+      "ps4_universal_price": "4500₸",
+      "icon": "metro-redux.jpg"
+    },
+    {
+      "name": "CTR",
+      "ps5_online_price": "3990₸",
+      "ps5_universal_price": "5500₸",
+      "ps4_online_price": "3990₸",
+      "ps4_universal_price": "4990₸",
+      "icon": "ctr.jpg"
+    },
+    {
+      "name": "SNIPER ELITE 5",
+      "ps5_online_price": "4990₸",
+      "ps5_universal_price": "7990₸",
+      "ps4_online_price": "4990₸",
+      "ps4_universal_price": "6990₸",
+      "icon": "sniper_elite_5.jpg"
+    },
+    {
+      "name": "IT TAKES TWO",
+      "ps5_online_price": "3990₸",
+      "ps5_universal_price": "5500₸",
+      "ps4_online_price": "3990₸",
+      "ps4_universal_price": "4990₸",
+      "icon": "it_takes_two.jpg"
+    },
+    {
+      "name": "GHOSTRUNNER 2",
+      "ps5_online_price": "7990₸",
+      "ps5_universal_price": "9990₸",
+      "ps4_online_price": "",
+      "ps4_universal_price": "",
+      "icon": "ghostrunner_2.jpg"
     }
   ]
 }
