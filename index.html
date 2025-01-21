@@ -122,6 +122,52 @@
       border-radius: 50%;
     }
 
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .game-catalog {
+        padding: 10px;
+      }
+
+      table {
+        font-size: 1rem;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+
+      .intro-screen {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .game-catalog {
+        padding: 8px;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -146,43 +192,188 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Данные будут динамически загружены сюда -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      fetch('games.json')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Ошибка загрузки данных');
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log(data); // Выводим данные в консоль
-
-          const tableBody = document.querySelector('#games-table tbody');
-          data.games.forEach(game => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-              <td>${game.name}</td>
-              <td>${game.onlinePricePS5}</td>
-              <td>${game.universalPricePS5}</td>
-              <td>${game.onlinePricePS4 || 'Не доступно'}</td>
-              <td>${game.universalPricePS4 || 'Не доступно'}</td>
-              <td><img src="${game.icon}" alt="${game.name}"></td>
-            `;
-            tableBody.appendChild(row);
-          });
-        })
-        .catch(error => {
-          console.error('Ошибка при загрузке данных о играх:', error);
-        });
-    });
-  </script>
-</body>
-</html>
+            <!-- Заполнение таблицы -->
+            <tr>
+              <td>UFS5</td>
+              <td>9000</td>
+              <td>17000</td>
+              <td>—</td>
+              <td>—</td>
+              <td><img src="images/UFS5.png" alt="UFS5"></td>
+            </tr>
+            <tr>
+              <td>FC24</td>
+              <td>6500</td>
+              <td>10000</td>
+              <td>6000</td>
+              <td>10000</td>
+              <td><img src="images/FC24.png" alt="FC24"></td>
+            </tr>
+            <tr>
+              <td>FC25</td>
+              <td>18000</td>
+              <td>14000</td>
+              <td>14000</td>
+              <td>10000</td>
+              <td><img src="images/FC25.png" alt="FC25"></td>
+            </tr>
+            <tr>
+              <td>MORTAL11KOMBAT</td>
+              <td>5500</td>
+              <td>7500</td>
+              <td>4500</td>
+              <td>7000</td>
+              <td><img src="images/MORTAL11KOMBAT.png" alt="MORTAL11KOMBAT"></td>
+            </tr>
+            <tr>
+              <td>UFC4</td>
+              <td>5500</td>
+              <td>9000</td>
+              <td>4500</td>
+              <td>8500</td>
+              <td><img src="images/UFC4.png" alt="UFC4"></td>
+            </tr>
+            <tr>
+              <td>GTA5</td>
+              <td>5500</td>
+              <td>8500</td>
+              <td>4500</td>
+              <td>8000</td>
+              <td><img src="images/GTA5.png" alt="GTA5"></td>
+            </tr>
+            <tr>
+              <td>ОДИН ИЗ НАС</td>
+              <td>5500</td>
+              <td>9000</td>
+              <td>4500</td>
+              <td>8500</td>
+              <td><img src="images/ОДИН_ИЗ_НАС.png" alt="ОДИН ИЗ НАС"></td>
+            </tr>
+            <tr>
+              <td>ЧЕЛОВЕК ПАУК</td>
+              <td>5500</td>
+              <td>9500</td>
+              <td>4800</td>
+              <td>9000</td>
+              <td><img src="images/ЧЕЛОВЕК_ПАУК.png" alt="ЧЕЛОВЕК ПАУК"></td>
+            </tr>
+            <tr>
+              <td>ЧЕЛОВЕК ПАУК 2</td>
+              <td>6500</td>
+              <td>10000</td>
+              <td>6000</td>
+              <td>9500</td>
+              <td><img src="images/ЧЕЛОВЕК_ПАУК_2.png" alt="ЧЕЛОВЕК ПАУК 2"></td>
+            </tr>
+            <tr>
+              <td>INJUSTICE 2</td>
+              <td>6500</td>
+              <td>9500</td>
+              <td>5500</td>
+              <td>9000</td>
+              <td><img src="images/INJUSTICE_2.png" alt="INJUSTICE 2"></td>
+            </tr>
+            <tr>
+              <td>MINECRAFT</td>
+              <td>5000</td>
+              <td>7000</td>
+              <td>4000</td>
+              <td>7000</td>
+              <td><img src="images/MINECRAFT.png" alt="MINECRAFT"></td>
+            </tr>
+            <tr>
+              <td>MORTAL 1 KOMBAT</td>
+              <td>17000</td>
+              <td>—</td>
+              <td>16000</td>
+              <td>—</td>
+              <td><img src="images/MORTAL_1_KOMBAT.png" alt="MORTAL 1 KOMBAT"></td>
+            </tr>
+            <tr>
+              <td>MORTAL 1 KOMBAT 2</td>
+              <td>17000</td>
+              <td>—</td>
+              <td>16000</td>
+              <td>—</td>
+              <td><img src="images/MORTAL_1_KOMBAT_2.png" alt="MORTAL 1 KOMBAT 2"></td>
+            </tr>
+                       <tr>
+              <td>GTA5</td>
+              <td>5500</td>
+              <td>8500</td>
+              <td>4500</td>
+              <td>8000</td>
+              <td><img src="images/GTA5.png" alt="GTA5"></td>
+            </tr>
+            <tr>
+              <td>ОДИН ИЗ НАС</td>
+              <td>5500</td>
+              <td>9000</td>
+              <td>4500</td>
+              <td>8500</td>
+              <td><img src="images/ОДИН_ИЗ_НАС.png" alt="ОДИН ИЗ НАС"></td>
+            </tr>
+            <tr>
+              <td>ЧЕЛОВЕК ПАУК</td>
+              <td>5500</td>
+              <td>9500</td>
+              <td>4800</td>
+              <td>9000</td>
+              <td><img src="images/ЧЕЛОВЕК_ПАУК.png" alt="ЧЕЛОВЕК ПАУК"></td>
+            </tr>
+            <tr>
+              <td>ЧЕЛОВЕК ПАУК 2</td>
+              <td>6500</td>
+              <td>10000</td>
+              <td>6000</td>
+              <td>9500</td>
+              <td><img src="images/ЧЕЛОВЕК_ПАУК_2.png" alt="ЧЕЛОВЕК ПАУК 2"></td>
+            </tr>
+            <tr>
+              <td>INJUSTICE 2</td>
+              <td>6500</td>
+              <td>9500</td>
+              <td>5500</td>
+              <td>9000</td>
+              <td><img src="images/INJUSTICE_2.png" alt="INJUSTICE 2"></td>
+            </tr>
+            <tr>
+              <td>MINECRAFT</td>
+              <td>5000</td>
+              <td>7000</td>
+              <td>4000</td>
+              <td>7000</td>
+              <td><img src="images/MINECRAFT.png" alt="MINECRAFT"></td>
+            </tr>
+            <tr>
+              <td>MORTAL 1 KOMBAT</td>
+              <td>17000</td>
+              <td>—</td>
+              <td>16000</td>
+              <td>—</td>
+              <td><img src="images/MORTAL_1_KOMBAT.png" alt="MORTAL 1 KOMBAT"></td>
+            </tr>
+            <tr>
+              <td>MORTAL 1 KOMBAT 2</td>
+              <td>17000</td>
+              <td>—</td>
+              <td>16000</td>
+              <td>—</td>
+              <td><img src="images/MORTAL_1_KOMBAT_2.png" alt="MORTAL 1 KOMBAT 2"></td>
+            </tr>
+            <tr>
+              <td>GHOSTRUNNER</td>
+              <td>4000</td>
+              <td>7000</td>
+              <td>3000</td>
+              <td>6000</td>
+              <td><img src="images/GHOSTRUNNER.png" alt="GHOSTRUNNER"></td>
+            </tr>
+            <tr>
+              <td>GHOSTRUNNER 2</td>
+              <td>7000</td>
+              <td>10000</td>
+              <td>6500</td>
+              <td>9500</td>
+              <td><img src="images/GHOSTRUNNER2.png" alt="GHOSTRUNNER 2"></td>
+            </tr>
