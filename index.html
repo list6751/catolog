@@ -79,10 +79,16 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
+    /* Контейнер для таблицы с прокруткой */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
     }
 
     th, td {
@@ -174,18 +180,21 @@
   <div class="content">
     <div class="game-catalog">
       <h1>gamespull</h1>
-      <table id="games-table">
-        <thead>
-          <tr>
-            <th>Игра</th>
-            <th>Цена онлайн версии</th>
-            <th>Цена универсальной версии</th>
-            <th>⠀</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+      <!-- Контейнер для таблицы с горизонтальной прокруткой -->
+      <div class="table-container">
+        <table id="games-table">
+          <thead>
+            <tr>
+              <th>Игра</th>
+              <th>Цена онлайн версии</th>
+              <th>Цена универсальной версии</th>
+              <th>⠀</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
