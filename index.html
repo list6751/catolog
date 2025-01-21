@@ -110,13 +110,6 @@
       background-color: #444;
     }
 
-    img {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
     @keyframes fadeInTable {
       0% { opacity: 0; }
       100% { opacity: 1; }
@@ -133,11 +126,6 @@
 
       table {
         font-size: 1rem;
-      }
-
-      img {
-        width: 40px;
-        height: 40px;
       }
     }
   </style>
@@ -158,7 +146,6 @@
             <th>Цена PS5 Универсал</th>
             <th>Цена PS4 Онлайн</th>
             <th>Цена PS4 Универсал</th>
-            <th>⠀</th>
           </tr>
         </thead>
         <tbody>
@@ -182,7 +169,6 @@
               <td>${game.ps5_universal_price}</td>
               <td>${game.ps4_online_price}</td>
               <td>${game.ps4_universal_price}</td>
-              <td><img src="${game.icon}" alt="${game.name}"></td>
             `;
             tableBody.appendChild(row);
           });
