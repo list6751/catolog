@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -122,52 +122,6 @@
       border-radius: 50%;
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-
-      .game-catalog {
-        padding: 10px;
-      }
-
-      table {
-        font-size: 1rem;
-      }
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
-
-      th, td {
-        padding: 10px;
-      }
-
-      .intro-screen {
-        font-size: 2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .game-catalog {
-        padding: 8px;
-      }
-
-      table {
-        font-size: 0.9rem;
-      }
-
-      img {
-        width: 35px;
-        height: 35px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -202,8 +156,15 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       fetch('games.json')
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Ошибка загрузки данных');
+          }
+          return response.json();
+        })
         .then(data => {
+          console.log(data); // Выводим данные в консоль
+
           const tableBody = document.querySelector('#games-table tbody');
           data.games.forEach(game => {
             const row = document.createElement('tr');
@@ -211,8 +172,8 @@
               <td>${game.name}</td>
               <td>${game.onlinePricePS5}</td>
               <td>${game.universalPricePS5}</td>
-              <td>${game.onlinePricePS4 || 'Нет данных'}</td>
-              <td>${game.universalPricePS4 || 'Нет данных'}</td>
+              <td>${game.onlinePricePS4 || 'Не доступно'}</td>
+              <td>${game.universalPricePS4 || 'Не доступно'}</td>
               <td><img src="${game.icon}" alt="${game.name}"></td>
             `;
             tableBody.appendChild(row);
