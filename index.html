@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>gamespull</title>
+  <title>Catalog of Games</title>
   <style>
     * {
       margin: 0;
@@ -11,369 +11,116 @@
       box-sizing: border-box;
     }
 
-    body, html {
-      height: 100%;
-      font-family: 'Arial', sans-serif;
-      overflow-x: hidden;
-      background-color: #000; 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
       color: #fff;
-    }
-
-    .intro-screen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #fff;
-      font-size: 3rem;
-      opacity: 1;
-      animation: fadeInScreen 2.5s ease-in-out forwards;
+      height: 100vh;
+      margin: 0;
     }
 
-    @keyframes fadeInScreen {
-      0% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-
-    .content {
-      opacity: 0;
-      animation: fadeInContent 2s ease-in-out 2.5s forwards; 
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-    }
-
-    @keyframes fadeInContent {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-      color: transparent;
-      background: linear-gradient(to right, #ffffff 30%, #000000 70%);
-      -webkit-background-clip: text;
-      animation: fadeInText 2s ease-in-out;
-      margin-bottom: 20px;
-    }
-
-    @keyframes fadeInText {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .game-catalog {
-      width: 100%;
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-      margin-top: 20px;
+    .container {
+      width: 80%;
+      background-color: #222;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 20px;
     }
 
     th, td {
       padding: 15px;
       text-align: center;
-      font-size: 1.2rem;
-      font-weight: 500;
+      border: 1px solid #444;
     }
 
     th {
-      background-color: #000;
-      color: white;
+      background-color: #333;
     }
 
     td {
       background-color: #222;
-      color: #fff;
-    }
-
-    tr {
-      transition: background-color 0.3s ease;
-    }
-
-    tr:hover {
-      background-color: #444;
     }
 
     img {
       width: 50px;
       height: 50px;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 5px;
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-
-      .game-catalog {
-        padding: 10px;
-      }
-
-      table {
-        font-size: 1rem;
-      }
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
-
-      th, td {
-        padding: 10px;
-      }
-
-      .intro-screen {
-        font-size: 2rem;
-      }
+    tr:hover {
+      background-color: #444;
     }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .game-catalog {
-        padding: 8px;
-      }
-
-      table {
-        font-size: 0.9rem;
-      }
-
-      img {
-        width: 35px;
-        height: 35px;
-      }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  
-  <div class="intro-screen">
-    Welcome
+
+  <div class="container">
+    <h1>Игры для PS4 и PS5</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Игра</th>
+          <th>Цена онлайн версии (PS5)</th>
+          <th>Цена универсальной версии (PS5)</th>
+          <th>Цена онлайн версии (PS4)</th>
+          <th>Цена универсальной версии (PS4)</th>
+          <th>Иконка</th>
+        </tr>
+      </thead>
+      <tbody id="games-tbody">
+        <!-- Строки таблицы будут добавляться динамически с помощью JavaScript -->
+      </tbody>
+    </table>
   </div>
 
-  <div class="content">
-    <div class="game-catalog">
-      <h1>Установка игр для PS4/PS5</h1>
-      <div class="table-container">
-        <table id="games-table">
-          <thead>
-            <tr>
-              <th>Игра</th>
-              <th>Цена онлайн версии (PS5)</th>
-              <th>Цена универсальной версии (PS5)</th>
-              <th>Цена онлайн версии (PS4)</th>
-              <th>Цена универсальной версии (PS4)</th>
-              <th>⠀</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Заполнение таблицы -->
-            <tr>
-              <td>UFS5</td>
-              <td>9000</td>
-              <td>17000</td>
-              <td>—</td>
-              <td>—</td>
-              <td><img src="images/UFS5.png" alt="UFS5"></td>
-            </tr>
-            <tr>
-              <td>FC24</td>
-              <td>6500</td>
-              <td>10000</td>
-              <td>6000</td>
-              <td>10000</td>
-              <td><img src="images/FC24.png" alt="FC24"></td>
-            </tr>
-            <tr>
-              <td>FC25</td>
-              <td>18000</td>
-              <td>14000</td>
-              <td>14000</td>
-              <td>10000</td>
-              <td><img src="images/FC25.png" alt="FC25"></td>
-            </tr>
-            <tr>
-              <td>MORTAL11KOMBAT</td>
-              <td>5500</td>
-              <td>7500</td>
-              <td>4500</td>
-              <td>7000</td>
-              <td><img src="images/MORTAL11KOMBAT.png" alt="MORTAL11KOMBAT"></td>
-            </tr>
-            <tr>
-              <td>UFC4</td>
-              <td>5500</td>
-              <td>9000</td>
-              <td>4500</td>
-              <td>8500</td>
-              <td><img src="images/UFC4.png" alt="UFC4"></td>
-            </tr>
-            <tr>
-              <td>GTA5</td>
-              <td>5500</td>
-              <td>8500</td>
-              <td>4500</td>
-              <td>8000</td>
-              <td><img src="images/GTA5.png" alt="GTA5"></td>
-            </tr>
-            <tr>
-              <td>ОДИН ИЗ НАС</td>
-              <td>5500</td>
-              <td>9000</td>
-              <td>4500</td>
-              <td>8500</td>
-              <td><img src="images/ОДИН_ИЗ_НАС.png" alt="ОДИН ИЗ НАС"></td>
-            </tr>
-            <tr>
-              <td>ЧЕЛОВЕК ПАУК</td>
-              <td>5500</td>
-              <td>9500</td>
-              <td>4800</td>
-              <td>9000</td>
-              <td><img src="images/ЧЕЛОВЕК_ПАУК.png" alt="ЧЕЛОВЕК ПАУК"></td>
-            </tr>
-            <tr>
-              <td>ЧЕЛОВЕК ПАУК 2</td>
-              <td>6500</td>
-              <td>10000</td>
-              <td>6000</td>
-              <td>9500</td>
-              <td><img src="images/ЧЕЛОВЕК_ПАУК_2.png" alt="ЧЕЛОВЕК ПАУК 2"></td>
-            </tr>
-            <tr>
-              <td>INJUSTICE 2</td>
-              <td>6500</td>
-              <td>9500</td>
-              <td>5500</td>
-              <td>9000</td>
-              <td><img src="images/INJUSTICE_2.png" alt="INJUSTICE 2"></td>
-            </tr>
-            <tr>
-              <td>MINECRAFT</td>
-              <td>5000</td>
-              <td>7000</td>
-              <td>4000</td>
-              <td>7000</td>
-              <td><img src="images/MINECRAFT.png" alt="MINECRAFT"></td>
-            </tr>
-            <tr>
-              <td>MORTAL 1 KOMBAT</td>
-              <td>17000</td>
-              <td>—</td>
-              <td>16000</td>
-              <td>—</td>
-              <td><img src="images/MORTAL_1_KOMBAT.png" alt="MORTAL 1 KOMBAT"></td>
-            </tr>
-            <tr>
-              <td>MORTAL 1 KOMBAT 2</td>
-              <td>17000</td>
-              <td>—</td>
-              <td>16000</td>
-              <td>—</td>
-              <td><img src="images/MORTAL_1_KOMBAT_2.png" alt="MORTAL 1 KOMBAT 2"></td>
-            </tr>
-                       <tr>
-              <td>GTA5</td>
-              <td>5500</td>
-              <td>8500</td>
-              <td>4500</td>
-              <td>8000</td>
-              <td><img src="images/GTA5.png" alt="GTA5"></td>
-            </tr>
-            <tr>
-              <td>ОДИН ИЗ НАС</td>
-              <td>5500</td>
-              <td>9000</td>
-              <td>4500</td>
-              <td>8500</td>
-              <td><img src="images/ОДИН_ИЗ_НАС.png" alt="ОДИН ИЗ НАС"></td>
-            </tr>
-            <tr>
-              <td>ЧЕЛОВЕК ПАУК</td>
-              <td>5500</td>
-              <td>9500</td>
-              <td>4800</td>
-              <td>9000</td>
-              <td><img src="images/ЧЕЛОВЕК_ПАУК.png" alt="ЧЕЛОВЕК ПАУК"></td>
-            </tr>
-            <tr>
-              <td>ЧЕЛОВЕК ПАУК 2</td>
-              <td>6500</td>
-              <td>10000</td>
-              <td>6000</td>
-              <td>9500</td>
-              <td><img src="images/ЧЕЛОВЕК_ПАУК_2.png" alt="ЧЕЛОВЕК ПАУК 2"></td>
-            </tr>
-            <tr>
-              <td>INJUSTICE 2</td>
-              <td>6500</td>
-              <td>9500</td>
-              <td>5500</td>
-              <td>9000</td>
-              <td><img src="images/INJUSTICE_2.png" alt="INJUSTICE 2"></td>
-            </tr>
-            <tr>
-              <td>MINECRAFT</td>
-              <td>5000</td>
-              <td>7000</td>
-              <td>4000</td>
-              <td>7000</td>
-              <td><img src="images/MINECRAFT.png" alt="MINECRAFT"></td>
-            </tr>
-            <tr>
-              <td>MORTAL 1 KOMBAT</td>
-              <td>17000</td>
-              <td>—</td>
-              <td>16000</td>
-              <td>—</td>
-              <td><img src="images/MORTAL_1_KOMBAT.png" alt="MORTAL 1 KOMBAT"></td>
-            </tr>
-            <tr>
-              <td>MORTAL 1 KOMBAT 2</td>
-              <td>17000</td>
-              <td>—</td>
-              <td>16000</td>
-              <td>—</td>
-              <td><img src="images/MORTAL_1_KOMBAT_2.png" alt="MORTAL 1 KOMBAT 2"></td>
-            </tr>
-            <tr>
-              <td>GHOSTRUNNER</td>
-              <td>4000</td>
-              <td>7000</td>
-              <td>3000</td>
-              <td>6000</td>
-              <td><img src="images/GHOSTRUNNER.png" alt="GHOSTRUNNER"></td>
-            </tr>
-            <tr>
-              <td>GHOSTRUNNER 2</td>
-              <td>7000</td>
-              <td>10000</td>
-              <td>6500</td>
-              <td>9500</td>
-              <td><img src="images/GHOSTRUNNER2.png" alt="GHOSTRUNNER 2"></td>
-            </tr>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Загружаем данные из файла games.json
+      fetch('games.json')
+        .then(response => response.json())
+        .then(data => {
+          const tableBody = document.getElementById("games-tbody");
+
+          // Динамическое создание строк таблицы
+          data.games.forEach(game => {
+            // Проверяем, есть ли хотя бы одна цена
+            if (game.onlinePricePS5 || game.universalPricePS5 || game.onlinePricePS4 || game.universalPricePS4) {
+              const row = document.createElement("tr");
+
+              // Заполнение строк
+              row.innerHTML = `
+                <td>${game.name}</td>
+                <td>${game.onlinePricePS5 !== null ? game.onlinePricePS5 : "-"}</td>
+                <td>${game.universalPricePS5 !== null ? game.universalPricePS5 : "-"}</td>
+                <td>${game.onlinePricePS4 !== null ? game.onlinePricePS4 : "-"}</td>
+                <td>${game.universalPricePS4 !== null ? game.universalPricePS4 : "-"}</td>
+                <td><img src="${game.icon}" alt="${game.name}"></td>
+              `;
+              tableBody.appendChild(row);
+            }
+          });
+        })
+        .catch(error => {
+          console.error('Ошибка при загрузке данных о играх:', error);
+        });
+    });
+  </script>
+
+</body>
+</html>
