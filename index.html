@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -192,6 +192,7 @@
             </tr>
           </thead>
           <tbody>
+            <!-- Данные будут динамически загружены сюда -->
           </tbody>
         </table>
       </div>
@@ -210,8 +211,8 @@
               <td>${game.name}</td>
               <td>${game.onlinePricePS5}</td>
               <td>${game.universalPricePS5}</td>
-              <td>${game.onlinePricePS4}</td>
-              <td>${game.universalPricePS4}</td>
+              <td>${game.onlinePricePS4 || 'Нет данных'}</td>
+              <td>${game.universalPricePS4 || 'Нет данных'}</td>
               <td><img src="${game.icon}" alt="${game.name}"></td>
             `;
             tableBody.appendChild(row);
