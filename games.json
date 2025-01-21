@@ -398,7 +398,7 @@
             "ps5_universal_price": "13990₸",
             "ps4_online_price": "11990₸",
             "ps4_universal_price": "13990₸",
-            "icon": "50.jpg"
+            "icon": "100.jpg"
         },
         {
             "name": "HITMAN",
@@ -406,7 +406,7 @@
             "ps5_universal_price": "6500₸",
             "ps4_online_price": "4990₸",
             "ps4_universal_price": "5990₸",
-            "icon": "51.jpg"
+            "icon": "50.jpg"
         },
         {
             "name": "FAR CRY 6",
@@ -414,7 +414,7 @@
             "ps5_universal_price": "6990₸",
             "ps4_online_price": "4990₸",
             "ps4_universal_price": "5990₸",
-            "icon": "52.jpg"
+            "icon": "51.jpg"
         },
         {
             "name": "THE WITCHER 3",
@@ -422,7 +422,7 @@
             "ps5_universal_price": "4990₸",
             "ps4_online_price": "3990₸",
             "ps4_universal_price": "4990₸",
-            "icon": "53.jpg"
+            "icon": "52.jpg"
         },
         {
             "name": "THE CALLISTO PROTOCOL",
@@ -430,7 +430,7 @@
             "ps5_universal_price": "9990₸",
             "ps4_online_price": "8990₸",
             "ps4_universal_price": "9990₸",
-            "icon": "54.jpg"
+            "icon": "53.jpg"
         },
         {
             "name": "MOUNT BLADE 2",
@@ -438,7 +438,7 @@
             "ps5_universal_price": "7500₸",
             "ps4_online_price": "5990₸",
             "ps4_universal_price": "6990₸",
-            "icon": "55.jpg"
+            "icon": "54.jpg"
         },
         {
             "name": "DARK SOULS 3",
@@ -446,7 +446,7 @@
             "ps5_universal_price": "7500₸",
             "ps4_online_price": "4990₸",
             "ps4_universal_price": "6990₸",
-            "icon": "56.jpg"
+            "icon": "55.jpg"
         },
         {
             "name": "METRO REDUX",
@@ -454,7 +454,7 @@
             "ps5_universal_price": "5500₸",
             "ps4_online_price": "3990₸",
             "ps4_universal_price": "4500₸",
-            "icon": "57.jpg"
+            "icon": "56.jpg"
         },
         {
             "name": "CTR",
@@ -462,7 +462,7 @@
             "ps5_universal_price": "5500₸",
             "ps4_online_price": "3990₸",
             "ps4_universal_price": "4990₸",
-            "icon": "58.jpg"
+            "icon": "57.jpg"
         },
         {
             "name": "SNIPER ELITE 5",
@@ -470,7 +470,7 @@
             "ps5_universal_price": "7990₸",
             "ps4_online_price": "4990₸",
             "ps4_universal_price": "6990₸",
-            "icon": "59.jpg"
+            "icon": "58.jpg"
         },
         {
             "name": "IT TAKES TWO",
@@ -478,7 +478,7 @@
             "ps5_universal_price": "5500₸",
             "ps4_online_price": "3990₸",
             "ps4_universal_price": "4990₸",
-            "icon": "60.jpg"
+            "icon": "59.jpg"
         },
         {
             "name": "GHOSTRUNNER 2",
@@ -486,7 +486,7 @@
             "ps5_universal_price": "9990₸",
             "ps4_online_price": "",
             "ps4_universal_price": "",
-            "icon": "61.jpg"
+            "icon": "60.jpg"
         }
     ]
 }
