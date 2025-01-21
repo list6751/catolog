@@ -15,7 +15,7 @@
       height: 100%;
       font-family: 'Arial', sans-serif;
       overflow: hidden;
-      background-color: #000; 
+      background-color: #000;
       color: #fff;
     }
 
@@ -35,6 +35,22 @@
       animation: fadeInScreen 2.5s ease-in-out forwards;
     }
 
+    .greeting-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 2rem;
+      opacity: 1;
+      animation: fadeInScreen 2.5s ease-in-out forwards;
+    }
+
     @keyframes fadeInScreen {
       0% { opacity: 1; }
       100% { opacity: 0; visibility: hidden; }
@@ -47,7 +63,7 @@
 
     .content {
       opacity: 0;
-      animation: fadeInContent 2s ease-in-out 2.5s forwards; 
+      animation: fadeInContent 2s ease-in-out 2.5s forwards;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -76,9 +92,9 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      max-height: 80vh; /* Ограничиваем высоту контейнера */
-      overflow-y: auto; /* Включаем вертикальную прокрутку */
-      overflow-x: auto; /* Включаем горизонтальную прокрутку */
+      max-height: 80vh;
+      overflow-y: auto;
+      overflow-x: auto;
     }
 
     table {
@@ -128,11 +144,31 @@
         font-size: 1rem;
       }
     }
+
+    .change-name-button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .change-name-button:hover {
+      background-color: #666;
+    }
   </style>
 </head>
 <body>
   
-  <div class="intro-screen">
+  <div class="greeting-screen" id="greeting-screen">
+    Привет, загружаем данные...
+    <button class="change-name-button" id="change-name-button" style="display: none;">Изменить имя акаунта</button>
+  </div>
+
+  <div class="intro-screen" id="intro-screen">
     Welcome
   </div>
 
@@ -157,6 +193,36 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      let userName = localStorage.getItem('userName');
+      
+      if (!userName) {
+        userName = prompt("Введите имя акаунта для регистрации:");
+        if (userName) {
+          localStorage.setItem('userName', userName);
+        } else {
+          userName = "Untrusted user";
+        }
+      }
+
+      const greetingScreen = document.getElementById('greeting-screen');
+      greetingScreen.innerHTML = `Привет, ${userName}! Загрузка данных...`;
+
+      const changeNameButton = document.getElementById('change-name-button');
+      changeNameButton.style.display = 'inline-block';
+      
+      changeNameButton.addEventListener('click', function() {
+        const newName = prompt("Введите новое имя акаунта:");
+        if (newName) {
+          localStorage.setItem('userName', newName);
+          greetingScreen.innerHTML = `Привет, ${newName}! Загрузка данных...`;
+        }
+      });
+
+      setTimeout(() => {
+        greetingScreen.style.display = 'none';
+        document.getElementById('intro-screen').style.display = 'block';
+      }, 5000);
+
       fetch('games.json')
         .then(response => response.json())
         .then(data => {
